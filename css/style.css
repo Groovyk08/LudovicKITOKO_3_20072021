@@ -1,0 +1,479 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Shrikhand';
+}
+
+/* Dimensions et forme du logo */
+
+.bloclogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.imglogo {
+  width: 50%;
+  object-fit: cover;
+}
+
+.location {
+  background-color: rgb(219, 219, 219);
+}
+
+.iconemap {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-shadow: 5px 5px 5px 5px;
+}
+
+.iconemap p {
+  margin-left: 15px;
+}
+
+.presentation {
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.titre {
+  font-family: 'Roboto';
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 20px;
+}
+
+.boutton_fct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  align-content: center;
+}
+
+.fct {
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  width: 70%;
+  height: 50px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px #f2f2f2;
+  border: none;
+  margin-bottom: 15px;
+  animation: enter 1s linear both;
+}
+
+.fct:hover {
+  background-color: #ffade8;
+}
+
+.nbr_fct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #9356DC;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.nbr_fct p {
+  margin: 0;
+  color: white;
+}
+
+.iconefct {
+  color: rgb(128, 128, 128);
+  font-size: 16px;
+}
+
+.iconefct:hover {
+  color: #9356DC;
+}
+
+.presentation_texte {
+  font-family: 'Roboto';
+  text-align: center;
+}
+
+/* Dimensions et forme du boutton explorer */
+
+.boutton_explorer {
+  cursor: pointer;
+  display: flex;
+  color: #fff;
+  background: linear-gradient( 180deg, #FF79DA, #9356DC);
+  font-weight: bold;
+  height: 40px;
+  width: 70%;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin: 20px;
+}
+
+.boutton_explorer:hover{
+  transform: scale(1.2);
+}
+
+.restaurant_bloc {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.cliquecarte {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+.restaurant_carte {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  box-shadow: 10px 10px 10px #f2f2f2;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  animation: enter 1s linear both;
+}
+
+.imgrestaurant {
+  width: 100%;
+  height: 140px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+}
+
+.etiquette {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  width: 80px;
+  height: 25px;
+  color: rgb(0, 139, 139);
+  background-color: #99E2D0;
+}
+
+/* Champs texte des cartes restaurants*/
+
+.listerestaurant {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #f2f2f2;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.detailrestaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  padding: 10px;
+}
+
+.detailrestaurant h3 {
+  font-size: 15px;
+}
+
+.detailrestaurant p {
+  font-size: 14px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.coeurs {
+  position: relative;
+  padding: 10px;
+}
+
+.coeurs:hover .icone_coeur {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.coeurs:hover .icone_coeurcheck {
+  cursor: S;
+  opacity: 1;
+}
+
+.icone_coeur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.5s linear;
+}
+
+.icone_coeurcheck {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: linear-gradient( 180deg, #FF79DA, #9356DC);
+  transition: all 0.5s linear;
+}
+
+footer {
+  background-color: rgb(46, 45, 45);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.footer_titre {
+  font-family: 'Shrikhand';
+  font-weight: bold;
+  color: #ffff;
+  font-size: 15px;
+  margin: 10px;
+}
+
+.icone_footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffff;
+  margin-left: 5px;
+  padding: 3px;
+}
+
+.texticone {
+  font-family: 'Roboto';
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.textfooter {
+  font-family: 'Roboto';
+  color: #ffff;
+  padding: 5px;
+  line-height: 1.5;
+}
+
+/* ----------------- PARTIE PAGES RESTAURANTS -------------------- */
+
+.headerpage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.headericone {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  color: #000000;
+}
+
+/* Dimension logo sur les pages restaurants */
+
+.imgpagelogo {
+  max-width: 70%;
+  object-fit: cover;
+}
+
+/* Dimension images sur les pages restaurants */
+
+.imgpagerestaurant {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.cartepagerestaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: #F2F2F2;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px;
+}
+
+.blocpagetitre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blocpagetitre h2 {
+  font-family: 'Shrikhand';
+}
+
+.iconepagecoeur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 10px 50px;
+}
+
+.iconepagecoeur:hover {
+  color: linear-gradient( 180deg, #FF79DA, #9356DC);
+}
+
+.menurestaurant {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.titremenu {
+  margin: 10px
+}
+
+.cartemenu {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px 0 #c3c3c3;
+  justify-content: space-around;
+  align-content: center;
+  animation: enter 1s linear both;
+}
+
+/* Champs texte des plats */
+
+.detailmenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+}
+
+.detailemenu h3 {
+  font-size: 15px;
+}
+
+.detailmenu p {
+  font-size: 14px;
+}
+
+/* prix des plats */
+
+.prix {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  padding: 10px;
+}
+
+.prix_check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  max-width: 0;
+  overflow: hidden;
+  width: 30%;
+  background-color: rgb(0, 128, 0);
+  transition: all 0.5s linear;
+}
+
+.prix_check:hover {
+  max-width: 50px;
+  transform: rotateZ(360deg)
+}
+
+/* Animation du checkin d'une carte */
+
+@keyframes enter {
+  0% {
+    transform: translateY(30px);
+    opacity: 0
+  }
+  50% {
+    transform: translateY(15px);
+    opacity: 1
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+/* Boutton validation d'une commande */
+
+.boutton_commande {
+  cursor: pointer;
+  display: flex;
+  color: #fff;
+  background: linear-gradient( 180deg, #FF79DA, #9356DC);
+  font-weight: bold;
+  height: 45px;
+  width: 60%;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin: 30px;
+}
+
+.boutton_commande:hover{
+  transform: scale(1.2);
+}
