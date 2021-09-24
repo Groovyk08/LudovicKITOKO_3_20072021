@@ -1,0 +1,714 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Shrikhand';
+}
+
+/* Position du loading spinner */
+
+.loader_background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+  animation: 3s loader 0.5s linear both;
+}
+
+/* Loading spinner */
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2ms linear infinite;
+  animation: spin 300ms linear infinite;
+  border-top: 16px solid #9356DC;
+  border-bottom: 16px solid #FF79DA;
+}
+
+/* Rotation du loader */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 100;
+  }
+  99% {
+    z-index: 100;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/* Dimensions et forme du logo */
+
+.bloclogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-bottom: 2px inset #4e4e4e;
+}
+
+.imglogo {
+  width: 50%;
+  object-fit: cover;
+}
+
+/* Forme de l'input localisation */
+
+.location {
+  display: flex;
+  background-color: rgb(219, 219, 219);
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 40px;
+}
+
+.iconemap {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 15px;
+}
+
+.villemap {
+  border: none;
+  background-color: rgb(219, 219, 219);
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* Forme de la section presentation */
+
+.presentation {
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.explorer_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.titre {
+  font-family: 'Roboto';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+}
+
+.processus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-content: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+.boutton_fct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  align-content: center;
+}
+
+.fct {
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  width: 70%;
+  height: 50px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #f2f2f2;
+  border: none;
+  margin-bottom: 15px;
+  animation: enter 1s linear both;
+}
+
+.fct:hover {
+  background: #9356dc30;
+}
+
+.nbr_fct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #9356DC;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.iconefct {
+  color: rgb(128, 128, 128);
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.iconefct:hover {
+  color: #9356DC;
+}
+
+.presentation_texte {
+  font-family: 'Roboto';
+  text-align: center;
+}
+
+/* Dimensions et forme du boutton explorer */
+
+.boutton_explorer {
+  cursor: pointer;
+  display: flex;
+  color: #fff;
+  background: linear-gradient( 180deg, #FF79DA, #9356DC);
+  font-weight: bold;
+  height: 40px;
+  width: 60%;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin: 20px;
+  border: none;
+}
+
+/* Animation au clic */
+
+.boutton_explorer:active {
+  transform: scale(1.2);
+}
+
+.restaurant_bloc {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Forme du clique sur les cartes */
+
+.cliquecarte {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+.restaurant_carte {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  box-shadow: 10px 10px 10px #f2f2f2;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  animation: enter 1s linear both;
+}
+
+.imgrestaurant {
+  width: 100%;
+  height: 140px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+}
+
+/* Etiquette nouveau restaurant */
+
+.etiquette {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  width: 80px;
+  height: 25px;
+  color: rgb(0, 139, 139);
+  background-color: #99E2D0;
+}
+
+/* Champs texte des cartes restaurants*/
+
+.listerestaurant {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #f2f2f2;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.detailrestaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  padding: 10px;
+}
+
+/* Forme du titre dans la classe detailrestaurant*/
+
+.detailrestaurant h3 {
+  font-size: 15px;
+}
+
+/* Forme du texte dans la classe detailrestraurant */
+
+.detailrestaurant p {
+  font-size: 14px;
+}
+
+/* Forme de la section restaurants */
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.coeurs {
+  position: relative;
+  padding: 10px;
+}
+
+.coeurs:hover .icone_coeur {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.coeurs:hover .icone_coeurcheck {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.icone_coeur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.5s linear;
+}
+
+/* forme et animation de l'icone checkin*/
+
+.icone_coeurcheck {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.5s linear;
+  background: linear-gradient( #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -text-stroke-color: transparent;
+  -webkit-text-stroke-color: transparent;
+}
+
+/* Forme du footer */
+
+footer {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+}
+
+/* Forme du titre OHMYFOOD dans le footer */
+
+.footer_titre {
+  font-family: 'Shrikhand';
+  font-weight: bold;
+  color: #ffff;
+  font-size: 15px;
+  padding: 10px;
+}
+
+/* Forme des icones dans le footer */
+
+.icone_footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffff;
+  margin-left: 5px;
+  padding: 3px;
+}
+
+.texticone {
+  font-family: 'Roboto';
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Forme du texte dans le footer*/
+
+.textfooter {
+  font-family: 'Roboto';
+  color: #ffff;
+  padding: 5px;
+  line-height: 1.5;
+}
+
+/* forme du lien mail de contact dans le footer */
+
+.mailcontact {
+  color: #ffff;
+  -webkit-text-fill-color: white;
+  text-decoration: none;
+}
+
+/* Au survol du lien  */
+
+.mailconctact:hover {
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ----------------- PARTIE PAGES RESTAURANTS -------------------- */
+
+.headerpage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.headericone {
+position: absolute;
+margin-top: -5px;
+left: 10px;
+color: #000000;
+}
+
+/* Dimension logo sur les pages restaurants */
+
+.imgpagelogo {
+  max-width: 70%;
+  object-fit: cover;
+}
+
+/* Dimension images sur les pages restaurants */
+
+.imgpagerestaurant {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Forme de la section cartepagerestaurant*/
+
+.cartepagerestaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: #F2F2F2;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 250px;
+  margin-top: -20px;
+}
+
+.blocpagetitre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blocpagetitre h2 {
+  font-family: 'Shrikhand';
+}
+
+.iconepagecoeur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 10px 50px;
+}
+
+.iconepagecoeur:hover {
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+}
+
+/* Forme des différents menus des restaurants */
+
+.menurestaurant {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.titremenu {
+  margin: 10px
+}
+
+/* Effet du titre souligner */
+
+.traittitre {
+  border: none #0094ff 1px;
+  background-color: #99E2D0;
+  width: 40px;
+  height: 3px;
+  margin: 0px 0px 0px 15px;
+}
+
+/* Forme d'une carte dans une page restaurant */
+
+.cartemenu {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px 0 #c3c3c3;
+  justify-content: space-around;
+  align-content: center;
+  animation: enter 1s, linear, both;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Champs texte des plats */
+
+.detailmenu {
+  width: 100%;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.detailmenu h3 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detailmenu p {
+  font-size: 14px;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Forme de la div prix des plats */
+
+.prix {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  padding: 10px;
+}
+
+/* Forme et animation de la div checkin d'une commande */
+
+.prix_check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  max-width: 0;
+  overflow: hidden;
+  width: 30%;
+  background-color: #99E2D0;
+  transition: all 0.5s linear;
+}
+
+/* Forme et animation de l'icone check */
+
+.icone_check {
+  font-size: 25px;
+  color: #ffff;
+  transition: all 0.5s linear;
+}
+
+.cartemenu:hover .icone_check {
+  transform: rotateZ(360deg);
+}
+
+.cartemenu:hover .prix_check {
+  max-width: 50px;
+}
+
+/* Animation de translation du checkin d'une carte */
+
+@keyframes enter {
+  0% {
+    transform: translateY(30px);
+    opacity: 0
+  }
+  50% {
+    transform: translateY(15px);
+    opacity: 1
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+/* Boutton validation d'une commande */
+
+.boutton_commande {
+  cursor: pointer;
+  display: flex;
+  color: #fff;
+  background: linear-gradient( 180deg, #FF79DA, #9356DC);
+  font-weight: bold;
+  height: 45px;
+  width: 60%;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin: 30px;
+  border: none;
+}
+
+/* Animation au clic */
+
+.boutton_commande:active {
+  transform: scale(1.2);
+}
+
+/* -------------------PARTIE RESPONSIVE BREAKPOINTS--------------------- */
+
+/* Breakpoints pour le format tablette */
+
+@media only screen and (min-width: 600px) {
+  .boutton_fct {
+    display: flex;
+    flex-direction: row;
+  }
+  .fct {
+    width: 90%;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+/* Breakpoint pour le format ordinateur */
+
+@media only screen and (min-width: 900px) {
+  .restaurant_bloc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .cliquecarte {
+    display: contents;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .restaurant_carte {
+    width: 450px;
+  }
+  .boutton_fct {
+    display: flex;
+    flex-direction: row;
+  }
+}
