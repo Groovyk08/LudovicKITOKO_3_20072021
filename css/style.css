@@ -618,11 +618,11 @@ color: #000000;
   transition: all 0.5s linear;
 }
 
-.cartemenu:active .icone_check {
+.cartemenu:hover .icone_check {
   transform: rotateZ(360deg);
 }
 
-.cartemenu:active .prix_check {
+.cartemenu:hover .prix_check {
   max-width: 50px;
 }
 
